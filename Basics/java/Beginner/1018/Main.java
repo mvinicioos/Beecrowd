@@ -9,6 +9,7 @@ class Main{
 		int input, saveInput;
 
 		input = scanner.nextInt();
+		scanner.close();
 		saveInput = input;
 
 		if(input > 0 && input < 1000000){
@@ -20,7 +21,7 @@ class Main{
 
 			System.out.println(saveInput);
 			for(int i = 0; i < notes.length; i++){
-				System.out.println(String.format("%d nota(s) de R$ %.2f", notes[i], (double)values[i]));
+				System.out.println(String.format("%d nota(s) de R$ %d,00", notes[i], values[i]));
 			}
 		}
 	}
