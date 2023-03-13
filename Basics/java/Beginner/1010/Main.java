@@ -1,31 +1,32 @@
-import java.io.IOException;
 import java.util.Scanner;
 
-
 class Main{
-	public static void main(String args[]){
-		String 	line1, line2, l1[], l2[];
-		int 	qtd1, qtd2;
-		double 	v1, v2;
-		Scanner scanner = new Scanner(System.in);
+    public static void main(String[] args){
+        Scanner scanner = new Scanner(System.in);
+        int quantidade1, quantidade2;
+        double val1, val2, total;
+        String entrada1, entrada2, linha1[], linha2[];
 
-		//get values
-		line1 = scanner.nextLine();
-		line2 = scanner.nextLine();
+        //Entrada dos dados
+        entrada1 = scanner.nextLine();
+        entrada2 = scanner.nextLine();
+        scanner.close();
 
-		l1 = line1.split(" ");
-		l2 = line2.split(" ");
+        //Quebrar os dados em um vetor
+        linha1 = entrada1.split(" ");
+        linha2 = entrada2.split(" ");
 
-		//Get the integers
-		qtd1 = Integer.parseInt(l1[1]);
-		qtd2 = Integer.parseInt(l2[1]);
+        quantidade1 = Integer.parseInt(linha1[1]);
+        val1        = Double.parseDouble(linha1[2]);
 
-		//Get the floats
-		v1 = Double.parseDouble(l1[2]);
-		v2 = Double.parseDouble(l2[2]);
+        quantidade2 = Integer.parseInt(linha2[1]);
+        val2        = Double.parseDouble(linha2[2]);
 
-		System.out.println(String.format("VALOR A PAGAR: R$ %.2f", qtd1*v1 + qtd2*v2));
+        //Cálculo do total
+        total = ((double)quantidade1 * val1) + ((double)quantidade2 * val2);
 
-
-	}
+        //Saída dos dados
+        System.out.printf("VALOR A PAGAR: R$ %.2f\n", total);
+        
+    }
 }

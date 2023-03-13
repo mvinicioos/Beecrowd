@@ -1,25 +1,26 @@
-import java.io.IOException;
 import java.util.Scanner;
 import java.util.Locale;
 
 class Main{
-	public static void main(String args[]){
-		int number;
-		int hours;
-		float amountPerHours, salary;
-		Scanner scanner = new Scanner(System.in);
+        public static void main(String[] args){
+            Scanner scanner = new Scanner(System.in);
+            int idFuncionario, horas;
+            double valorHora, salario;
 
-		scanner.useLocale(Locale.US);
+            //Entradade dados padrão US
+            scanner.useLocale(Locale.US);
 
-		//Get values
-		number = scanner.nextInt();
-		hours = scanner.nextInt();
-		amountPerHours = scanner.nextFloat();
+            //Entrada de dados
+            idFuncionario   = scanner.nextInt();
+            horas           = scanner.nextInt();
+            valorHora       = scanner.nextDouble();
+            scanner.close();
 
+            //Cálculo do salário
+            salario = (double)horas * valorHora;
 
-		salary = hours*amountPerHours;
-
-		System.out.println(String.format("NUMBER = %d", number));
-		System.out.println(String.format("SALARY = U$ %.2f", salary));
-	}
+            System.out.printf("NUMBER = %d\n", idFuncionario);
+            System.out.printf("SALARY = U$ %.2f\n", salario);
+            
+        }
 }

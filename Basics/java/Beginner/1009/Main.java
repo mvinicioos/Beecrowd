@@ -1,25 +1,24 @@
-import java.io.IOException;
 import java.util.Scanner;
 import java.util.Locale;
 
-
-
 class Main{
-	public static void main(String args[]){
-		String name;
-		double salary, solds, finalSalary;
-		Scanner scanner = new Scanner(System.in);
+    public static void main(String[] args){
+        Scanner scanner = new Scanner(System.in);
+        final double taxaBonus = 0.15;
+        double salario, vendas;
+        //Entrada de dados padrão US
+        scanner.useLocale(Locale.US);
 
-		scanner.useLocale(Locale.US);
+        salario = scanner.nextDouble();
+        vendas  = scanner.nextDouble();
+        scanner.close();
 
-		//Get values
-		name 	= scanner.next();
-		salary 	= scanner.nextDouble();
-		solds 	= scanner.nextDouble();
-		
-		finalSalary = salary + (0.15 * solds);
+        //Cálculo salário
+        salario += vendas * taxaBonus;
 
-		System.out.println(String.format("TOTAL = R$ %.2f", finalSalary));
-		
-	}
+        //Saída dos dados
+        System.out.printf("TOTAL = R$ %.2f\n", salario);
+        
+
+    }
 }

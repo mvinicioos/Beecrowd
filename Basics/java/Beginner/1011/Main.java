@@ -6,7 +6,7 @@ class Main{
         Scanner scanner = new Scanner(System.in);
         final double pi = 3.14159;
         double r = 0;
-        double area = 0;
+        double volume = 0;
 
         //Setando o locale
         scanner.useLocale(Locale.US);
@@ -16,10 +16,10 @@ class Main{
         scanner.close();
 
         //Calculando a área
-        area = pi*(r*r);
+        volume = 4.0/3 * pi * r*r*r;
 
         //Imprimindo o resultado
-        System.out.printf("A=%.4f\n", area);
+        System.out.printf("VOLUME = %.3f\n", volume);
         
 
     }

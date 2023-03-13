@@ -1,15 +1,20 @@
-import java.io.IOException;
 import java.util.Scanner;
 
 class Main{
-	public static void main(String args[]){
-		Scanner scanner = new Scanner(System.in);
-		int x, y, prod;
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int a, b, produto;
 
-		x = scanner.nextInt();
-		y = scanner.nextInt();
+        //Pegando os valores
+        a = sc.nextInt();
+        b = sc.nextInt();
+        sc.close();
 
-		System.out.println(String.format("PROD = %d", x*y));
+        //Realizando o produto
+        produto = a * b;
 
-	}
+        //Imprimindo o resultado
+        System.out.printf("PROD = %d\n", produto);
+        
+    }
 }

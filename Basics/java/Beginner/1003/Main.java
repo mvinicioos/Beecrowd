@@ -1,14 +1,21 @@
-import java.io.IOException;
 import java.util.Scanner;
 
 class Main{
-	public static void main(String args[]){
-		Scanner scanner = new Scanner(System.in);
-		int x, y, sum;
+    public static void main(String[] args){
+        Scanner scanner = new Scanner(System.in);
+        int a, b, soma;
 
-		x = scanner.nextInt();
-		y = scanner.nextInt();
+        //Pegando os valores;
+        a = scanner.nextInt();
+        b = scanner.nextInt();
+        scanner.close();
 
-		System.out.println(String.format("SOMA = %d", x+y));
-	}
+        //Efetuando a soma
+        soma = a + b;
+
+        //Imprimindo os valores
+        System.out.printf("SOMA = %d\n", soma);
+        
+
+    }
 }

@@ -1,17 +1,22 @@
-import java.io.IOException;
 import java.util.Scanner;
 
 class Main{
-	public static void main(String args[]){
-		int a, b, c, d, difference;
-		Scanner scanner = new Scanner(System.in);
-		
-		a = scanner.nextInt();
-		b = scanner.nextInt();
-		c = scanner.nextInt();
-		d = scanner.nextInt();
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int a, b, c, d, diferenca;
 
-		difference = (a*b) - (c*d);
-		System.out.println(String.format("DIFERENCA = %d", difference));
-	}
+        //Pegando os valores
+        a = sc.nextInt();
+        b = sc.nextInt();
+        c = sc.nextInt();
+        d = sc.nextInt();
+        sc.close();
+
+        //Calculando
+        diferenca = (a*b) - (c*d);
+
+        //Imprimindo o resultado
+        System.out.printf("DIFERENCA = %d\n", diferenca);
+        
+    }
 }
